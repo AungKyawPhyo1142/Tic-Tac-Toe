@@ -1,0 +1,49 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-color: #dba451;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 5em;
+    height: 5em;
+    padding: 1em;
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: repeat(3,1fr);   
+}
+
+.cell{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+    border-bottom: none;
+}
+
+.cell.highlight{
+    background-color: #ffb340;
+}
